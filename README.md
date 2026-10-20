@@ -6,6 +6,8 @@ No page builder, no jQuery, no tracking.
 
 > The theme folder and text domain are `rashid`; the name shown in the dashboard is **Rashed**.
 
+![Rashed theme screenshot](screenshot.png)
+
 ## What you get
 - English (left-to-right) and Arabic (right-to-left) layouts, built with logical CSS properties so both read naturally.
 - Works with [Polylang](https://wordpress.org/plugins/polylang/) (free) for separate English and Arabic pages and posts.

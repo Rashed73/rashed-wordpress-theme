@@ -33,7 +33,7 @@ final class Options
             'brand_mark'    => ['label' => __('Brand mark (1-3 characters)', 'rashid'), 'default' => '', 'input' => 'text'],
             'author_name'   => ['label' => __('Your name (used in page titles and search results)', 'rashid'), 'default' => '', 'input' => 'text'],
             'author_role'   => ['label' => __('Your role, e.g. Web developer', 'rashid'), 'default' => '', 'input' => 'text'],
-            'profile_links' => ['label' => __('Profile links (LinkedIn, GitHub …), separated by spaces', 'rashid'), 'default' => '', 'input' => 'text'],
+            'profile_links' => ['label' => __('Profile links (LinkedIn, GitHub …), separated by spaces or commas', 'rashid'), 'default' => '', 'input' => 'text'],
             'footer_credit' => ['label' => __('Footer text ({brand} = brand name, {year} = current year)', 'rashid'), 'default' => '{brand} · © {year}', 'input' => 'text'],
             'apply_label'   => ['label' => __('Header button text', 'rashid'), 'default' => __('Get in touch', 'rashid'), 'input' => 'text'],
             'cta_title'     => ['label' => __('Closing section: title', 'rashid'), 'default' => __("Let's talk", 'rashid'), 'input' => 'text'],

@@ -209,7 +209,7 @@ msgid "Your role, e.g. Web developer"
 msgstr ""
 
 #: src/Settings/Options.php:36
-msgid "Profile links (LinkedIn, GitHub …), separated by spaces"
+msgid "Profile links (LinkedIn, GitHub …), separated by spaces or commas"
 msgstr ""
 
 #: src/Settings/Options.php:37
