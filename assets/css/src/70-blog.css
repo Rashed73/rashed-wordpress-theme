@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Blog: article cards, the article page, table of contents, author box, pagination
+   Everything uses logical properties, so the right-to-left pages mirror by themselves.
+   ========================================================================== */
+
+/* ---- Breadcrumbs (inside the dark title band) ---- */
+.breadcrumbs { margin-block-end: 20px; font-size: .875rem; }
+.breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 4px 0; margin: 0; padding: 0; list-style: none; color: var(--muted-d); }
+.breadcrumbs li + li::before { content: "\203A"; margin-inline: 10px; opacity: .6; } /* single right angle quote */
+html[dir="rtl"] .breadcrumbs li + li::before { content: "\2039"; }
+.breadcrumbs a { color: var(--on-dark); }
+.breadcrumbs a:hover { color: var(--accent); }
+.breadcrumbs [aria-current="page"] { color: var(--muted-d); }
+
+/* ---- Article title band ---- */
+.article-hero h1 { max-width: 22em; }
+.article-hero .eyebrow a { color: var(--accent); }
+.article-hero .eyebrow a:hover { color: var(--accent-hover); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 4px 0; margin: 24px 0 0; font-size: .9375rem; color: var(--muted-d); }
+.article-meta > * + *::before { content: "\00B7"; margin-inline: 10px; opacity: .7; }
+
+/* ---- The article column ---- */
+.article__inner { max-width: 800px; }
+.article__image { margin: 0 0 36px; }
+.article__image img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+
+/* Reading text: larger and airier than the rest of the site. */
+.article__body { font-size: 1.125rem; line-height: 1.85; color: var(--text-soft); }
+html[lang^="ar"] .article__body { line-height: 2.05; }
+/* The column is the container: undo the page-section rules of .entry-content. */
+.article__body > * { max-width: none; margin-inline: 0; padding-inline: 0; }
+.article__body > :first-child { margin-block-start: 0; }
+.article__body > :last-child { margin-block-end: 0; }
+.article__body > :is(ul, ol) { padding-inline-start: 1.4em; }
+.article__body h2 { margin-block: 2em .6em; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.875rem); scroll-margin-block-start: 96px; }
+.article__body h3 { margin-block: 1.6em .5em; font-size: 1.3125rem; scroll-margin-block-start: 96px; }
+.article__body p, .article__body li { overflow-wrap: anywhere; }
+.article__body li + li { margin-block-start: .4em; }
+.article__body strong { color: var(--text); }
+.article__body blockquote {
+  margin-inline: 0; padding: 4px 24px; border-inline-start: 4px solid var(--accent);
+  background: var(--white); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; color: var(--text);
+}
+html[dir="rtl"] .article__body blockquote { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+.article__body code { padding: 2px 6px; border-radius: 6px; background: var(--chip-bg); color: var(--chip-ink); font-size: .9em; direction: ltr; unicode-bidi: isolate; }
+.article__body pre { margin-block: 1.5em; padding: 18px 20px; overflow-x: auto; border-radius: var(--radius-sm); background: var(--ink); color: var(--on-dark); font-size: .9375rem; line-height: 1.7; direction: ltr; text-align: left; }
+.article__body pre code { padding: 0; background: none; color: inherit; }
+.article__body hr { margin-block: 2.5em; border: 0; border-block-start: 1px solid var(--line); }
+.article__body figure { margin-inline: 0; }
+.article__body figcaption { margin-block-start: 8px; font-size: .875rem; color: var(--muted); text-align: center; }
+.article__body table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+.article__body th, .article__body td { padding: 10px 14px; border: 1px solid var(--line); text-align: start; }
+.article__body th { background: var(--white); color: var(--text); }
+
+/* ---- Table of contents ---- */
+.toc { margin-block-end: 2.5em; padding: 22px 26px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+.toc__title { margin: 0 0 10px; font-size: .875rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text); }
+html[lang^="ar"] .toc__title { letter-spacing: 0; text-transform: none; font-size: 1rem; }
+.toc ol { display: grid; gap: 6px; margin: 0; padding-inline-start: 1.3em; font-size: 1rem; line-height: 1.6; }
+.toc a { color: var(--accent-strong); }
+.toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---- Author box ---- */
+.author-box { margin-block-start: 56px; padding: 24px 28px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+.author-box p { margin: 0; }
+.author-box__label { font-size: .8125rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+html[lang^="ar"] .author-box__label { letter-spacing: 0; text-transform: none; font-size: .9375rem; }
+.author-box__name { margin-block-start: 4px; font-size: 1.25rem; font-weight: 700; color: var(--text); }
+.author-box__role { color: var(--muted); }
+.author-box .more { display: inline-flex; margin-block-start: 12px; }
+
+/* ---- Article cards and the grid ---- */
+.post-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 28px; }
+
+.post-card {
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.post-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.post-card__link { display: flex; flex: 1; flex-direction: column; color: inherit; }
+.post-card__media { aspect-ratio: 16 / 10; overflow: hidden; background: var(--surface-2); border-block-end: 1px solid var(--line); }
+.post-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.post-card__media--empty {
+  display: grid; place-items: center; color: var(--accent);
+  background: radial-gradient(70% 90% at 80% 10%, rgba(58, 168, 255, .25), transparent 70%), linear-gradient(135deg, var(--ink), var(--ink-3));
+  border-block-end-color: var(--ink-line);
+}
+.post-card__body { display: flex; flex: 1; flex-direction: column; gap: 8px; padding: 22px 24px 24px; }
+.post-card__cat { margin: 0; font-size: .8125rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-strong); }
+html[lang^="ar"] .post-card__cat { letter-spacing: 0; text-transform: none; font-size: .9375rem; }
+.post-card__title { margin: 0; font-size: 1.3125rem; font-weight: 600; letter-spacing: 0; line-height: 1.35; color: var(--text); }
+.post-card__link:hover .post-card__title { color: var(--accent-strong); }
+.post-card__excerpt {
+  display: -webkit-box; margin: 0; overflow: hidden;
+  font-size: .9688rem; line-height: 1.65; color: var(--muted);
+  -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+}
+.post-card__meta { display: flex; flex-wrap: wrap; margin: auto 0 0; padding-block-start: 10px; font-size: .875rem; color: var(--muted); }
+.post-card__meta > * + *::before { content: "\00B7"; margin-inline: 8px; }
+
+.blog__empty { padding-block: 40px; text-align: center; font-size: 1.125rem; color: var(--muted); }
+.related { background: var(--white); border-block-start: 1px solid var(--line); }
+.related h2 { margin-block-end: 28px; }
+
+/* ---- Pagination ---- */
+.pagination { margin-block-start: 48px; }
+.pagination .nav-links { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+.pagination .page-numbers {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding-inline: 14px;
+  background: var(--white); border: 1px solid var(--line); border-radius: 999px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--text);
+}
+.pagination a.page-numbers:hover { border-color: var(--accent-strong); color: var(--accent-strong); }
+.pagination .page-numbers.current { background: var(--ink); border-color: var(--ink); color: var(--white); }
+.pagination .page-numbers.dots { border-color: transparent; background: transparent; }
+/* "Newer" points back: the arrow icon points forward, so it is flipped (and flipped again in RTL, where it is already mirrored). */
+.pagination .prev .icon-dir { transform: scaleX(-1); }
+html[dir="rtl"] .pagination .prev .icon-dir { transform: none; }
+
+@media (max-width: 640px) {
+  .article__body { font-size: 1.0625rem; }
+  .author-box { padding: 20px; }
+  .toc { padding: 18px 20px; }
+}

@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Single project page: screenshot frame, "at a glance" box, previous / next
+   ========================================================================== */
+
+.case__grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) 340px;
+  gap: clamp(32px, 5vw, 64px); align-items: start;
+}
+
+/* A project with no details has no side box: the content takes one column. */
+.case__grid--single { grid-template-columns: minmax(0, 860px); justify-content: center; }
+
+/* ---- Screenshot in a browser-style frame ---- */
+.shot {
+  margin: 0 0 32px; overflow: hidden;
+  background: var(--ink-2); border: 1px solid var(--ink-line); border-radius: 14px;
+  box-shadow: 0 24px 48px rgba(10, 16, 32, .18);
+}
+.shot__bar { display: flex; gap: 8px; padding: 12px 16px; border-block-end: 1px solid var(--ink-line); }
+.shot__bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--ink-dot); }
+.shot__frame { display: block; max-height: 640px; overflow: hidden; background: var(--white); }
+.shot__frame img { width: 100%; height: auto; object-fit: cover; object-position: top center; }
+
+/* ---- "Project at a glance" box ---- */
+.case__rail {
+  position: sticky; inset-block-start: 96px;
+  padding: 28px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.case__rail-title { margin: 0 0 16px; font-size: 1.125rem; letter-spacing: 0; }
+.case__rail .btn { width: 100%; }
+
+.facts { margin: 0 0 24px; }
+.facts__row { display: grid; gap: 4px; padding-block: 12px; border-block-start: 1px solid var(--line); }
+.facts__row:first-child { padding-block-start: 0; border-block-start: 0; }
+.facts dt { font-size: .8125rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 0; font-weight: 500; }
+html[lang^="ar"] .facts dt { font-size: .9375rem; letter-spacing: 0; text-transform: none; }
+
+/* ---- Previous / next project ---- */
+.project-nav { background: var(--white); border-block: 1px solid var(--line); }
+.project-nav__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-block: 24px; }
+.project-nav__link { display: grid; gap: 2px; max-width: 320px; }
+.project-nav__link--next { text-align: end; }
+.project-nav__label { font-size: .8125rem; font-weight: 600; color: var(--muted); }
+.project-nav__title { font-weight: 600; }
+.project-nav__link:hover .project-nav__title { color: var(--accent-strong); }
+.project-nav__all { font-weight: 600; color: var(--accent-strong); }
+
+@media (max-width: 1000px) {
+  .case__grid { grid-template-columns: minmax(0, 1fr); }
+  .case__rail { position: static; }
+}
+
+@media (max-width: 640px) {
+  .case__rail { padding: 22px; }
+}
+
+.project-nav__all { display: inline-flex; align-items: center; min-height: 44px; }

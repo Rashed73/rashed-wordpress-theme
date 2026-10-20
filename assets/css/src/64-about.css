@@ -1,0 +1,30 @@
+/* ==========================================================================
+   About block: portrait beside the text
+   ========================================================================== */
+
+.about-split {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: clamp(32px, 5vw, 56px); align-items: start;
+}
+
+.portrait {
+  width: 132px; height: 132px; margin-block-end: 24px; overflow: hidden;
+  background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 50%;
+}
+/* Faces sit in the upper part of a half-body photo. */
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+
+@media (max-width: 900px) {
+  .about-split { grid-template-columns: minmax(0, 1fr); }
+}
+
+.portrait figure { height: 100%; margin: 0; }
+.portrait img { border: 0; border-radius: 0; object-fit: cover; object-position: center 18%; }
+
+/* About page: a larger portrait and the story beside it. */
+.about-split--page { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; }
+.portrait--lg { width: min(100%, 360px); height: auto; aspect-ratio: 1; margin-block-end: 0; margin-inline: auto; }
+@media (max-width: 900px) {
+  .about-split--page { grid-template-columns: minmax(0, 1fr); }
+  .portrait--lg { width: min(100%, 280px); }
+}

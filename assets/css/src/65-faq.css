@@ -1,0 +1,22 @@
+/* ==========================================================================
+   FAQ: the core "Details" block styled as an accordion
+   ========================================================================== */
+
+.faq details { padding-block: 20px; border-block-start: 1px solid var(--line); }
+.faq details:last-child { border-block-end: 1px solid var(--line); }
+
+.faq summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  min-height: 44px; font-size: 1.125rem; font-weight: 600; list-style: none; cursor: pointer;
+}
+.faq summary::-webkit-details-marker { display: none; }
+
+/* Chevron drawn with borders; it flips when the item is open. */
+.faq summary::after {
+  content: ""; flex: none; width: 10px; height: 10px;
+  border: solid currentColor; border-width: 0 2px 2px 0;
+  transform: rotate(45deg); transition: transform .15s;
+}
+.faq details[open] summary::after { transform: rotate(-135deg); }
+
+.faq details p { margin: 14px 0 0; color: var(--muted); }

@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Site header: brand, navigation, language switcher, mobile menu
+   Desktop shows the menu inline; below 900px (with JavaScript) it collapses
+   behind the toggle button. Without JavaScript the menu simply wraps.
+   ========================================================================== */
+
+.site-header {
+  /* One pixel above the top edge: on some screens the sticky header lands on a fraction of a pixel and
+     the page behind would show as a thin light line above it. The padding gives the pixel back. */
+  position: sticky; inset-block-start: -1px; padding-block-start: 1px; z-index: 50;
+  background: var(--ink); color: var(--on-dark);
+  border-block-end: 1px solid transparent; transition: border-color .2s;
+}
+.site-header.is-scrolled { border-block-end-color: var(--ink-line); }
+
+.site-header__inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 12px 24px; min-height: 72px;
+}
+
+/* ---- Brand ---- */
+.brand { display: inline-flex; align-items: center; gap: 10px; font-size: 1.25rem; font-weight: 700; color: var(--white); }
+.brand__mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 9px;
+  background: var(--accent); color: var(--accent-ink); font-size: .9375rem; font-weight: 700;
+}
+.brand__name { direction: ltr; }
+
+/* Uploaded logo: fixed height, width follows the artwork. */
+.brand--logo { gap: 0; }
+.brand__logo { display: block; width: auto; height: 36px; max-width: 100%; }
+.brand--footer .brand__logo { height: 32px; }
+
+/* ---- Navigation ---- */
+.site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+
+.site-nav .menu { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 28px; margin: 0; padding: 0; list-style: none; }
+.site-nav .menu > li { position: relative; }
+.site-nav .menu a { display: inline-flex; align-items: center; min-height: 44px; font-size: .9375rem; font-weight: 500; color: var(--on-dark); }
+.site-nav .menu a:hover,
+.site-nav .current-menu-item > a,
+.site-nav .current-menu-ancestor > a { color: var(--accent); }
+
+/* Dropdown (Services). Opens on hover and on keyboard focus. */
+.site-nav .menu-item-has-children > a::after {
+  content: ""; width: 6px; height: 6px; margin-inline-start: 8px;
+  border: solid currentColor; border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg) translateY(-2px);
+}
+.site-nav .sub-menu {
+  position: absolute; inset-inline-start: -12px; inset-block-start: 100%;
+  min-width: 260px; margin: 0; padding: 8px; list-style: none;
+  background: var(--ink-2); border: 1px solid var(--ink-line); border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  opacity: 0; visibility: hidden; transform: translateY(6px);
+  transition: opacity .15s, transform .15s, visibility .15s;
+}
+.site-nav .menu > li:hover > .sub-menu,
+.site-nav .menu > li:focus-within > .sub-menu { opacity: 1; visibility: visible; transform: none; }
+.site-nav .sub-menu a { display: flex; width: 100%; padding: 8px 12px; border-radius: 8px; }
+.site-nav .sub-menu a:hover { background: var(--ink-3); }
+
+/* ---- Tools: language switcher and header button ---- */
+.site-nav__tools { display: flex; align-items: center; gap: 16px; }
+
+.lang { display: inline-flex; align-items: center; margin: 0; padding: 0; list-style: none; font-size: .9375rem; color: var(--muted-d); }
+.lang li + li::before { content: "|"; margin-inline: 8px; opacity: .6; }
+.lang a { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 2px; }
+.lang a[aria-current="true"] { color: var(--white); font-weight: 600; }
+.lang a:hover { color: var(--accent); }
+
+/* ---- Mobile menu toggle (hidden on desktop) ---- */
+.nav-toggle {
+  display: none; align-items: center; justify-content: center;
+  width: 44px; height: 44px; padding: 0;
+  background: transparent; border: 1px solid var(--ink-line); border-radius: 10px;
+  color: var(--white); cursor: pointer;
+}
+.nav-toggle__bars,
+.nav-toggle__bars::before,
+.nav-toggle__bars::after {
+  display: block; width: 20px; height: 2px; border-radius: 2px;
+  background: currentColor; transition: transform .2s, opacity .2s;
+}
+.nav-toggle__bars { position: relative; }
+.nav-toggle__bars::before,
+.nav-toggle__bars::after { content: ""; position: absolute; inset-inline-start: 0; }
+.nav-toggle__bars::before { inset-block-start: -6px; }
+.nav-toggle__bars::after  { inset-block-start: 6px; }
+
+/* Open state: the three bars become a cross. */
+.site-header.is-open .nav-toggle__bars { background: transparent; }
+.site-header.is-open .nav-toggle__bars::before { transform: translateY(6px) rotate(45deg); }
+.site-header.is-open .nav-toggle__bars::after  { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 900px) {
+  .js .nav-toggle { display: inline-flex; }
+
+  /* Collapsed by default; opens full-width under the brand row. */
+  .js .site-nav {
+    display: none; flex-direction: column; flex-wrap: nowrap; align-items: stretch; flex-basis: 100%;
+    gap: 8px; padding-block: 8px 16px; border-block-start: 1px solid var(--ink-line);
+  }
+  .js .site-header.is-open .site-nav { display: flex; }
+
+  /* An open menu taller than the screen scrolls inside itself (the header is sticky, so without this
+     the lower items, the language switch and the button could not be reached). The page behind stays still. */
+  .js .site-header.is-open .site-nav {
+    max-height: calc(100vh - 74px); max-height: calc(100dvh - 74px);
+    overflow-y: auto; overscroll-behavior: contain;
+  }
+  .js .site-nav > * { flex-shrink: 0; }
+  html:has(.site-header.is-open) { overflow: hidden; }
+
+  .site-nav .menu { flex-direction: column; align-items: stretch; gap: 0; }
+  .site-nav .menu a { width: 100%; min-height: 44px; font-size: 1.0625rem; }
+
+  /* Submenus show inline, indented, instead of as a floating panel. */
+  .site-nav .sub-menu {
+    position: static; min-width: 0; padding: 0; padding-inline-start: 16px;
+    background: transparent; border: 0; box-shadow: none;
+    opacity: 1; visibility: visible; transform: none;
+  }
+  .site-nav .menu-item-has-children > a::after { display: none; }
+
+  .site-nav__tools { justify-content: space-between; padding-block-start: 8px; }
+}
+
+/* Touch target: the logo link is at least 44 px tall. */
+.brand { min-height: 44px; }

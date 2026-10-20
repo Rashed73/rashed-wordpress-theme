@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Feature split (text beside an image), tick list and technology pills
+   ========================================================================== */
+
+.feature-split {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 5vw, 56px); align-items: center;
+}
+
+/* Tick list: the tick is an inline SVG background, so it mirrors with the text. */
+.ticks { display: grid; gap: 16px; margin: 0 0 36px; padding: 0; list-style: none; }
+.ticks li { position: relative; padding-inline-start: 34px; line-height: 1.7; }
+.ticks li::before {
+  content: ""; position: absolute; inset-inline-start: 0; inset-block-start: .45em;
+  width: 20px; height: 20px;
+  background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233AA8FF' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E");
+}
+
+/* Technology names stay left-to-right in Arabic pages. */
+.tech-list { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.tech-list li {
+  padding: 10px 18px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--white); font-size: .9375rem; font-weight: 500; direction: ltr;
+}
+
+@media (max-width: 900px) {
+  .feature-split { grid-template-columns: minmax(0, 1fr); }
+}

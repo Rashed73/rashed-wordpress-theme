@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": false,
+    "layout": { "contentSize": "720px", "wideSize": "1200px" },
+    "color": {
+      "custom": false,
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "gradients": [],
+      "palette": [
+        { "slug": "ink", "name": "Ink", "color": "#0A1020" },
+        { "slug": "ink-2", "name": "Ink 2", "color": "#111B2E" },
+        { "slug": "paper", "name": "Paper", "color": "#F5F7FB" },
+        { "slug": "white", "name": "White", "color": "#FFFFFF" },
+        { "slug": "text", "name": "Text", "color": "#0F1A2E" },
+        { "slug": "muted", "name": "Muted", "color": "#5A6A82" },
+        { "slug": "accent", "name": "Accent", "color": "#3AA8FF" },
+        { "slug": "accent-strong", "name": "Accent strong", "color": "#0B63C5" }
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "slug": "plex",
+          "name": "IBM Plex",
+          "fontFamily": "'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small", "name": "Small", "size": "0.9375rem" },
+        { "slug": "base", "name": "Base", "size": "1.0625rem" },
+        { "slug": "lead", "name": "Lead", "size": "1.25rem" },
+        { "slug": "h3", "name": "Heading 3", "size": "1.5rem" },
+        { "slug": "h2", "name": "Heading 2", "size": "clamp(1.75rem, 1.2rem + 2vw, 2.5rem)" },
+        { "slug": "h1", "name": "Heading 1", "size": "clamp(2.25rem, 1.2rem + 4vw, 3.5rem)" }
+      ]
+    },
+    "spacing": { "units": ["px", "rem", "%", "vw"] }
+  },
+  "styles": {
+    "color": { "background": "var(--wp--preset--color--paper)", "text": "var(--wp--preset--color--text)" },
+    "typography": { "fontFamily": "var(--wp--preset--font-family--plex)", "fontSize": "var(--wp--preset--font-size--base)", "lineHeight": "1.7" }
+  }
+}

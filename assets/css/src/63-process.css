@@ -1,0 +1,13 @@
+/* ==========================================================================
+   "How I work" steps
+   ========================================================================== */
+
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.step { padding-block-start: 24px; border-block-start: 2px solid var(--accent); }
+.step__n { display: block; margin-block-end: 10px; font-size: .9375rem; font-weight: 600; color: var(--accent-strong); }
+.step h3 { margin: 0 0 10px; }
+.step p { margin: 0; color: var(--muted); }
+
+@media (max-width: 900px) {
+  .steps { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+}

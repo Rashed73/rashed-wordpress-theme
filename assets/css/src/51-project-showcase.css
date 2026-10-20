@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Projects showcase: category filter, card grid and project cards
+   The first card of the unfiltered page is a wide "feature" card.
+   ========================================================================== */
+
+/* ---- Filter bar ---- */
+.filters { margin-block-end: 36px; }
+.filters ul { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+
+.filter {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; padding: 0 18px;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: var(--white); color: var(--text);
+  font-size: .9375rem; font-weight: 600; cursor: pointer;
+  transition: border-color .15s, background .15s, color .15s;
+}
+.filter:hover { border-color: var(--accent-strong); color: var(--accent-strong); }
+.filter[aria-current="true"] { background: var(--ink); border-color: var(--ink); color: var(--white); }
+.filter__count { font-size: .8125rem; font-weight: 500; font-variant-numeric: tabular-nums; opacity: .7; }
+
+/* ---- Grid ---- */
+.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+
+/* ---- Card ---- */
+.project-card {
+  overflow: hidden;
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.project-card[hidden] { display: none; }
+.project-card__link { display: flex; flex-direction: column; height: 100%; }
+
+.project-card__media {
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+  aspect-ratio: 16 / 10; background: var(--surface-2); border-block-end: 1px solid var(--line);
+}
+/* Screenshots are tall; show the top of the page, which has the header and hero. */
+.project-card__media img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.project-card__placeholder { color: var(--muted); font-size: .875rem; direction: ltr; }
+
+.project-card__body { display: flex; flex: 1; flex-direction: column; gap: 6px; padding: 22px 24px 26px; }
+.project-card__body .chips { margin-block-end: 6px; }
+.project-card__title { margin: 0; font-size: 1.3125rem; font-weight: 600; letter-spacing: 0; }
+.project-card__meta { margin: 0; font-size: .875rem; font-weight: 600; color: var(--accent-strong); }
+.project-card__excerpt {
+  display: -webkit-box; margin: 0; overflow: hidden;
+  font-size: .9375rem; line-height: 1.65; color: var(--muted);
+  -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+}
+.project-card .more { margin-block-start: auto; padding-block-start: 12px; }
+
+/* ---- Wide feature card ---- */
+.project-card--feature { grid-column: 1 / -1; }
+.project-card--feature .project-card__link { flex-direction: row; }
+/* The screenshot keeps its landscape shape (a tall box would crop a wide screenshot to a sliver)
+   and sits centred in the card, framed. */
+.project-card--feature .project-card__link { align-items: center; }
+.project-card--feature .project-card__media {
+  flex: 1.15 1 0; align-self: center; aspect-ratio: 16 / 10; min-height: 0;
+  margin: 24px; border: 1px solid var(--line); border-radius: var(--radius-sm);
+}
+.project-card--feature .project-card__body { flex: 1 1 0; justify-content: center; padding: 32px; }
+.project-card--feature .project-card__title { font-size: 1.75rem; }
+.project-card--feature .project-card__excerpt { font-size: 1rem; -webkit-line-clamp: 5; }
+
+@media (max-width: 1000px) {
+  .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  /* The wide card becomes a normal stacked card. */
+  .project-card--feature { grid-column: 1 / -1; }
+  .project-card--feature .project-card__link { flex-direction: column; }
+  /* flex: none, or the 0 flex-basis of the wide layout collapses the image to nothing in a column. */
+  .project-card--feature .project-card__media { flex: none; align-self: stretch; margin: 0; border: 0; border-radius: 0; border-block-end: 1px solid var(--line); }
+  .project-card--feature .project-card__body { padding: 22px 24px 26px; }
+}
+
+@media (max-width: 640px) {
+  .project-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* On phones the filters are one row you swipe, not a tall stack that pushes the projects down. */
+@media (max-width: 640px) {
+  .filters { margin-inline: calc(var(--gutter) * -1); }
+  .filters ul {
+    flex-wrap: nowrap; padding-inline: var(--gutter); padding-block-end: 8px;
+    overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none;
+  }
+  .filters ul::-webkit-scrollbar { display: none; }
+  .filter { flex: none; scroll-snap-align: start; white-space: nowrap; }
+}

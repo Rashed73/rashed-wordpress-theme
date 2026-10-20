@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Contact page: the form beside the other ways to reach the owner
+   ========================================================================== */
+
+.contact-split { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 56px); align-items: start; }
+
+.contact-card { position: static; }
+.contact-card:hover { transform: none; box-shadow: none; }
+
+.contact-list { display: grid; gap: 20px; margin: 20px 0 0; padding: 0; list-style: none; }
+.contact-list li { line-height: 1.5; }
+.contact-list strong { display: block; font-size: .875rem; font-weight: 600; color: var(--muted); }
+.contact-list a { font-size: 1.125rem; font-weight: 500; color: var(--accent-strong); text-decoration: underline; text-underline-offset: 3px; }
+/* Numbers and addresses read left to right, also inside Arabic pages. */
+.contact-list a { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+@media (max-width: 900px) {
+  .contact-split { grid-template-columns: minmax(0, 1fr); }
+}
+
+.contact-list a { min-height: 44px; align-items: center; display: inline-flex; }

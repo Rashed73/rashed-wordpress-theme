@@ -1,0 +1,568 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rashid theme\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Domain: rashid\n"
+
+#: 404.php:18
+msgid "This page does not exist"
+msgstr "هذه الصفحة غير موجودة"
+
+#: 404.php:19
+msgid "The link may be old or mistyped."
+msgstr "ربما الرابط قديم أو مكتوب بشكل خاطئ."
+
+#: 404.php:22
+msgid "Back to the home page"
+msgstr "العودة إلى الصفحة الرئيسية"
+
+#: footer.php:16
+msgid "Footer"
+msgstr "التذييل"
+
+#: header.php:20
+msgid "Skip to content"
+msgstr "انتقل إلى المحتوى"
+
+#: header.php:28
+msgid "Menu"
+msgstr "القائمة"
+
+#: index.php:28
+msgid "Nothing found."
+msgstr "لا توجد نتائج."
+
+#: src/Admin/ProjectColumns.php:47
+msgid "Screenshot"
+msgstr "لقطة الشاشة"
+
+#: src/Admin/ProjectColumns.php:51 src/Admin/ProjectDisplayBox.php:55
+msgid "Order"
+msgstr "الترتيب"
+
+#: src/Admin/ProjectColumns.php:52
+msgid "On home"
+msgstr "في الرئيسية"
+
+#: src/Admin/ProjectDisplayBox.php:40
+msgid "Display on the site"
+msgstr "العرض في الموقع"
+
+#: src/Admin/ProjectDisplayBox.php:59
+msgid ""
+"Lower numbers come first: 1 is the first project. Projects with the same "
+"number show newest first."
+msgstr ""
+"الأرقام الأصغر تظهر أولًا: 1 هو أول مشروع. المشاريع التي لها الرقم نفسه تظهر"
+" الأحدث أولًا."
+
+#: src/Admin/ProjectDisplayBox.php:63
+msgid "Show on the home page"
+msgstr "إظهار في الصفحة الرئيسية"
+
+#: src/Content/Project.php:129 src/Content/ProjectFields.php:36
+msgid "Client"
+msgstr "العميل"
+
+#: src/Content/Project.php:130
+msgid "Industry"
+msgstr "المجال"
+
+#: src/Content/Project.php:131
+msgid "Role"
+msgstr "الدور"
+
+#: src/Content/Project.php:132 src/Content/ProjectFields.php:40
+msgid "Developer"
+msgstr "المطوّر"
+
+#: src/Content/Project.php:133 src/Content/ProjectFields.php:41
+msgid "Designer"
+msgstr "المصمّم"
+
+#: src/Content/ProjectFields.php:37
+msgid "Industry / country"
+msgstr "المجال / الدولة"
+
+#: src/Content/ProjectFields.php:38
+msgid "My role"
+msgstr "دوري"
+
+#: src/Content/ProjectFields.php:39
+msgid "Technologies (comma separated)"
+msgstr "التقنيات (مفصولة بفواصل)"
+
+#: src/Content/ProjectFields.php:42
+msgid "Website address"
+msgstr "عنوان الموقع"
+
+#: src/Content/ProjectMetaBox.php:30
+msgid "Project details"
+msgstr "تفاصيل المشروع"
+
+#: src/Content/ProjectPostType.php:54
+msgid "Describe the project: the problem, the approach and the result."
+msgstr "اشرح المشروع: المشكلة والحل والنتيجة."
+
+#: src/Content/ProjectPostType.php:55
+msgid "What was delivered (one item per line)"
+msgstr "ما تم تسليمه (عنصر في كل سطر)"
+
+#: src/Content/ProjectPostType.php:64 template-parts/project/filters.php:25
+msgid "Project categories"
+msgstr "تصنيفات المشاريع"
+
+#: src/Content/ProjectPostType.php:65
+msgid "Project category"
+msgstr "تصنيف المشروع"
+
+#: src/Content/ProjectPostType.php:81 src/Content/ProjectPostType.php:86
+#: src/View/FallbackMenu.php:37 template-parts/project/pager.php:18
+#: blocks/featured-projects/editor.js:35
+msgid "Projects"
+msgstr "المشاريع"
+
+#: src/Content/ProjectPostType.php:82
+msgid "Project"
+msgstr "مشروع"
+
+#: src/Content/ProjectPostType.php:83
+msgid "Add new project"
+msgstr "إضافة مشروع جديد"
+
+#: src/Content/ProjectPostType.php:84
+msgid "Edit project"
+msgstr "تعديل المشروع"
+
+#: src/Content/ProjectPostType.php:85 template-parts/project/filters.php:29
+#: template-parts/project/pager.php:28
+msgid "All projects"
+msgstr "كل المشاريع"
+
+#: src/Settings/Customizer.php:27
+msgid "Brand and call to action"
+msgstr "الهوية ودعوة التواصل"
+
+#: src/Settings/Options.php:32
+msgid "Brand name"
+msgstr "اسم العلامة"
+
+#: src/Settings/Options.php:33
+msgid "Brand mark (1-3 characters)"
+msgstr "رمز العلامة (من 1 إلى 3 أحرف)"
+
+#: src/Settings/Options.php:34
+msgid "Footer text ({brand} = brand name, {year} = current year)"
+msgstr "نص التذييل ({brand} = اسم العلامة، {year} = السنة الحالية)"
+
+#: src/Settings/Options.php:35
+msgid "Header button text"
+msgstr "نص زر الهيدر"
+
+#: src/Settings/Options.php:35
+msgid "Get in touch"
+msgstr "تواصل معي"
+
+#: src/Settings/Options.php:36
+msgid "Closing section: title"
+msgstr "القسم الختامي: العنوان"
+
+#: src/Settings/Options.php:36
+msgid "Let's talk"
+msgstr "هيا نتحدث"
+
+#: src/Settings/Options.php:37
+msgid "Closing section: text"
+msgstr "القسم الختامي: النص"
+
+#: src/Settings/Options.php:37
+msgid ""
+"Have a question or a request? Send a message and you will get a reply as "
+"soon as possible."
+msgstr "عندك سؤال أو طلب؟ أرسل رسالة وسيصلك الرد في أقرب وقت."
+
+#: src/Settings/Options.php:38
+msgid "Closing section: button text"
+msgstr "القسم الختامي: نص الزر"
+
+#: src/Settings/Options.php:38
+msgid "Contact me"
+msgstr "راسلني"
+
+#: src/Leads/FormShortcode.php:43
+msgid "Send message"
+msgstr "إرسال الرسالة"
+
+#: src/Leads/LeadFields.php:38
+msgid "New"
+msgstr "جديد"
+
+#: src/Leads/LeadFields.php:39
+msgid "Contacted"
+msgstr "تم التواصل"
+
+#: src/Leads/LeadFields.php:40
+msgid "Closed"
+msgstr "مغلق"
+
+#: src/Leads/LeadForm.php:23 src/Leads/Notifier.php:32
+#: src/Leads/Admin/LeadColumns.php:41 src/Leads/Admin/LeadDetailsBox.php:43
+#: src/Leads/Admin/LeadExport.php:51
+msgid "Name"
+msgstr "الاسم"
+
+#: src/Leads/LeadForm.php:24 src/Leads/Notifier.php:33
+#: src/Leads/Admin/LeadDetailsBox.php:44 src/Leads/Admin/LeadExport.php:51
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: src/Leads/LeadForm.php:25
+msgid "Phone or WhatsApp (optional)"
+msgstr "الهاتف أو واتساب (اختياري)"
+
+#: src/Leads/LeadForm.php:26
+msgid "How can I help?"
+msgstr "كيف يمكنني مساعدتك؟"
+
+#: src/Leads/LeadForm.php:66
+msgid "Please fill in this field."
+msgstr "من فضلك املأ هذا الحقل."
+
+#: src/Leads/LeadForm.php:70
+msgid "Please enter a valid email address."
+msgstr "من فضلك أدخل بريدًا إلكترونيًا صحيحًا."
+
+#: src/Leads/LeadForm.php:74
+msgid "Please enter a valid phone number."
+msgstr "من فضلك أدخل رقم هاتف صحيحًا."
+
+#: src/Leads/LeadPostType.php:71 src/Leads/LeadPostType.php:73
+msgid "Leads"
+msgstr "الطلبات"
+
+#: src/Leads/LeadPostType.php:72 src/Leads/LeadPostType.php:75
+msgid "Lead"
+msgstr "طلب"
+
+#: src/Leads/LeadPostType.php:74
+msgid "All leads"
+msgstr "كل الطلبات"
+
+#: src/Leads/LeadPostType.php:76
+msgid "Search leads"
+msgstr "بحث في الطلبات"
+
+#: src/Leads/LeadPostType.php:77
+msgid "No leads yet."
+msgstr "لا توجد طلبات بعد."
+
+#: src/Leads/LeadPostType.php:78
+msgid "No leads in the trash."
+msgstr "لا توجد طلبات في سلة المهملات."
+
+#. 1: site name, 2: visitor name.
+#: src/Leads/Notifier.php:17
+msgid "[%1$s] New request from %2$s"
+msgstr "[%1$s] طلب جديد من %2$s"
+
+#: src/Leads/Notifier.php:34 src/Leads/Admin/LeadDetailsBox.php:45
+#: src/Leads/Admin/LeadExport.php:51
+msgid "Phone"
+msgstr "الهاتف"
+
+#: src/Leads/Notifier.php:35 src/Leads/Admin/LeadColumns.php:43
+#: src/Leads/Admin/LeadDetailsBox.php:47 src/Leads/Admin/LeadExport.php:51
+msgid "Form"
+msgstr "النموذج"
+
+#: src/Leads/Notifier.php:36 src/Leads/Admin/LeadDetailsBox.php:48
+msgid "Page"
+msgstr "الصفحة"
+
+#: src/Leads/Notifier.php:40
+msgid "Open in the dashboard"
+msgstr "افتح في لوحة التحكم"
+
+#: src/Leads/Recipient.php:38
+msgid "Contact form"
+msgstr "نموذج التواصل"
+
+#: src/Leads/Recipient.php:45
+msgid "Send new requests to this email"
+msgstr "أرسل الطلبات الجديدة إلى هذا البريد"
+
+#: src/Leads/Recipient.php:46
+msgid "Leave empty to use the site administrator email."
+msgstr "اتركه فارغًا لاستخدام بريد مدير الموقع."
+
+#: src/Leads/SubmissionHandler.php:53
+msgid "Too many requests in a short time. Please try again later."
+msgstr "طلبات كثيرة في وقت قصير. حاول مرة أخرى لاحقًا."
+
+#: src/Leads/SubmissionHandler.php:59
+msgid "Sorry, your message could not be saved. Please try again."
+msgstr "عذرًا، تعذّر حفظ رسالتك. حاول مرة أخرى."
+
+#: src/Leads/Admin/LeadColumns.php:42 src/View/FallbackMenu.php:39
+msgid "Contact"
+msgstr "التواصل"
+
+#: src/Leads/Admin/LeadColumns.php:44 src/Leads/Admin/LeadDetailsBox.php:62
+#: src/Leads/Admin/LeadExport.php:51
+msgid "Status"
+msgstr "الحالة"
+
+#: src/Leads/Admin/LeadColumns.php:45 src/Leads/Admin/LeadDetailsBox.php:50
+#: src/Leads/Admin/LeadExport.php:51
+msgid "Received"
+msgstr "تاريخ الاستلام"
+
+#: src/Leads/Admin/LeadColumns.php:77
+msgid "All statuses"
+msgstr "كل الحالات"
+
+#: src/Leads/Admin/LeadDetailsBox.php:33
+msgid "Request"
+msgstr "الطلب"
+
+#: src/Leads/Admin/LeadDetailsBox.php:34
+msgid "Follow-up"
+msgstr "المتابعة"
+
+#: src/Leads/Admin/LeadDetailsBox.php:49 src/Leads/Admin/LeadExport.php:51
+#: template-parts/header/language-switcher.php:17
+msgid "Language"
+msgstr "اللغة"
+
+#: src/Leads/Admin/LeadDetailsBox.php:51 src/Leads/Admin/LeadExport.php:51
+msgid "Message"
+msgstr "الرسالة"
+
+#: src/Leads/Admin/LeadDetailsBox.php:70
+msgid "Private notes"
+msgstr "ملاحظات خاصة"
+
+#: src/Leads/Admin/LeadExport.php:36
+msgid "Export CSV"
+msgstr "تصدير CSV"
+
+#: src/Leads/Admin/LeadExport.php:42
+msgid "You are not allowed to export leads."
+msgstr "غير مسموح لك بتصدير الطلبات."
+
+#: src/Leads/Admin/LeadExport.php:51
+msgid "Notes"
+msgstr "ملاحظات"
+
+#: src/View/FallbackMenu.php:36
+msgid "Home"
+msgstr "الرئيسية"
+
+#: src/View/FallbackMenu.php:38
+msgid "About"
+msgstr "من أنا"
+
+#: src/Setup/ThemeSupport.php:49
+msgid "Primary menu"
+msgstr "القائمة الرئيسية"
+
+#: src/Setup/ThemeSupport.php:50
+msgid "Footer menu"
+msgstr "قائمة التذييل"
+
+#: template-parts/form/lead-form.php:27
+msgid "Thank you! Your message was sent and you will get a reply soon."
+msgstr "شكرًا لك! تم إرسال رسالتك وسيصلك الرد قريبًا."
+
+#: template-parts/form/lead-form.php:68
+msgid "Your details are used only to reply to your request."
+msgstr "تُستخدم بياناتك للرد على طلبك فقط."
+
+#: template-parts/header/primary-nav.php:12
+msgid "Main"
+msgstr "التنقل الرئيسي"
+
+#: template-parts/project/card.php:38
+msgid "View project"
+msgstr "عرض المشروع"
+
+#: template-parts/project/facts.php:17 template-parts/project/facts.php:18
+msgid "Project at a glance"
+msgstr "نظرة سريعة على المشروع"
+
+#: template-parts/project/facts.php:30
+msgid "Technologies"
+msgstr "التقنيات"
+
+#: template-parts/project/facts.php:44
+msgid "Visit website"
+msgstr "زيارة الموقع"
+
+#: template-parts/project/grid.php:18
+msgid "No projects yet."
+msgstr "لا توجد مشاريع بعد."
+
+#: template-parts/project/pager.php:22
+msgid "Previous project"
+msgstr "المشروع السابق"
+
+#: template-parts/project/pager.php:33
+msgid "Next project"
+msgstr "المشروع التالي"
+
+#: template-parts/project/showcase.php:16
+msgid "Selected work"
+msgstr "أعمال مختارة"
+
+#: template-parts/project/showcase.php:17
+msgid "Websites, e-commerce platforms and business systems built for clients."
+msgstr "مواقع ومنصات تجارة إلكترونية وأنظمة أعمال نفّذتها للعملاء."
+
+#: template-parts/project/showcase.php:18
+msgid "Portfolio"
+msgstr "معرض الأعمال"
+
+#: blocks/featured-projects/editor.js:25
+msgid "All categories"
+msgstr "كل التصنيفات"
+
+#: blocks/featured-projects/editor.js:37
+msgid "How many projects"
+msgstr "عدد المشاريع"
+
+#: blocks/featured-projects/editor.js:46
+msgid "Category"
+msgstr "التصنيف"
+
+#: blocks/featured-projects/editor.js:54
+msgid "Only projects marked \"Show on the home page\""
+msgstr "فقط المشاريع المحددة بـ \"إظهار في الصفحة الرئيسية\""
+
+#: blocks/featured-projects/editor.js:55
+msgid "When none are marked, the newest projects are shown."
+msgstr "عند عدم تحديد أي مشروع تظهر أحدث المشاريع."
+
+msgid "Blog"
+msgstr "المدونة"
+
+msgid "All articles"
+msgstr "كل المقالات"
+
+msgid "Articles are on the way."
+msgstr "المقالات قادمة قريبًا."
+
+msgid "Article categories"
+msgstr "تصنيفات المقالات"
+
+msgid "Newer articles"
+msgstr "مقالات أحدث"
+
+msgid "Older articles"
+msgstr "مقالات أقدم"
+
+msgid "Written by"
+msgstr "بقلم"
+
+msgid "About the author"
+msgstr "عن الكاتب"
+
+msgid "About me"
+msgstr "من أنا"
+
+msgid "Keep reading"
+msgstr "تابع القراءة"
+
+msgid "On this page"
+msgstr "في هذه الصفحة"
+
+msgid "Breadcrumb"
+msgstr "مسار التنقل"
+
+msgid "%d min read"
+msgstr "%d د قراءة"
+
+msgid "Page not found"
+msgstr "الصفحة غير موجودة"
+
+msgid "Search appearance"
+msgstr "الظهور في البحث"
+
+msgid "Title for search engines"
+msgstr "العنوان في محركات البحث"
+
+msgid ""
+"Aim for 50 to 60 characters. Leave empty to use the page name and your name."
+msgstr "يُفضَّل من 50 إلى 60 حرفًا. اتركه فارغًا لاستخدام اسم الصفحة واسمك."
+
+msgid "Description for search engines"
+msgstr "الوصف في محركات البحث"
+
+msgid ""
+"Aim for 120 to 160 characters. Leave empty to use the page summary "
+"(excerpt)."
+msgstr "يُفضَّل من 120 إلى 160 حرفًا. اتركه فارغًا لاستخدام ملخص الصفحة."
+
+msgid "characters"
+msgstr "حرف"
+
+msgctxt "month name"
+msgid "January"
+msgstr "يناير"
+
+msgctxt "month name"
+msgid "February"
+msgstr "فبراير"
+
+msgctxt "month name"
+msgid "March"
+msgstr "مارس"
+
+msgctxt "month name"
+msgid "April"
+msgstr "أبريل"
+
+msgctxt "month name"
+msgid "May"
+msgstr "مايو"
+
+msgctxt "month name"
+msgid "June"
+msgstr "يونيو"
+
+msgctxt "month name"
+msgid "July"
+msgstr "يوليو"
+
+msgctxt "month name"
+msgid "August"
+msgstr "أغسطس"
+
+msgctxt "month name"
+msgid "September"
+msgstr "سبتمبر"
+
+msgctxt "month name"
+msgid "October"
+msgstr "أكتوبر"
+
+msgctxt "month name"
+msgid "November"
+msgstr "نوفمبر"
+
+msgctxt "month name"
+msgid "December"
+msgstr "ديسمبر"
+
+#: footer.php
+msgid "Profiles"
+msgstr "حساباتي"
+
+#: footer.php
+msgid "(opens in a new tab)"
+msgstr "(يفتح في تبويب جديد)"

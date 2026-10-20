@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Call-to-action band that closes most pages
+   ========================================================================== */
+
+.cta-band { padding-block: var(--section-y); background: var(--ink); color: var(--on-dark); text-align: center; }
+.cta-band__inner { max-width: 760px; }
+.cta-band h2 { color: var(--white); font-size: clamp(2rem, 1.2rem + 3vw, 2.75rem); }
+.cta-band p { font-size: 1.1875rem; color: var(--muted-d); }
+
+.cta-band .wp-block-buttons { justify-content: center; margin-block-end: 20px; }
+.cta-band a:not(.wp-block-button__link):not(.btn) { color: var(--on-dark); text-decoration: underline; text-underline-offset: 3px; }

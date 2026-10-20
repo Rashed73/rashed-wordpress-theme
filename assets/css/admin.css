@@ -1,0 +1,13 @@
+/* Dashboard styles for the Projects list. */
+.column-rashid_image { width: 96px; }
+.column-rashid_image img { display: block; width: 80px; height: 50px; object-fit: cover; object-position: top; border: 1px solid #dcdcde; border-radius: 3px; }
+.column-rashid_order, .column-rashid_home { width: 72px; text-align: center; }
+
+/* Leads list and edit screen. */
+.rashid-status { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #f0f0f1; color: #3c434a; }
+.rashid-status--new { background: #d63638; color: #fff; }
+.rashid-status--contacted { background: #dba617; color: #1d2327; }
+.rashid-status--closed { background: #00a32a; color: #fff; }
+.rashid-lead th { width: 110px; }
+.rashid-lead__message { white-space: normal; max-width: 60ch; }
+.column-rashid_status { width: 110px; }

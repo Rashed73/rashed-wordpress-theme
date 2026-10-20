@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Site footer
+   ========================================================================== */
+
+.site-footer { background: var(--ink-deep); color: var(--muted-d); }
+
+.site-footer__inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 20px 32px; padding-block: 40px; font-size: .9375rem;
+}
+
+.brand--footer { font-size: 1.125rem; }
+
+.footer-nav .menu { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 28px; margin: 0; padding: 0; list-style: none; }
+.footer-nav .menu a { display: inline-flex; align-items: center; min-height: 44px; }
+.footer-nav .menu a:hover { color: var(--accent); }
+
+.footer-social { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0; padding: 0; list-style: none; }
+.footer-social a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding-inline: 4px; }
+.footer-social a:hover { color: var(--accent); }
+
+.site-footer__credit { margin: 0; }
+
+@media (max-width: 640px) {
+  .site-footer__inner { flex-direction: column; align-items: flex-start; }
+}
+
+.footer-nav .menu a { padding-inline: 4px; min-width: 44px; justify-content: center; }

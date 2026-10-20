@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Page hero: the dark title band at the top of inner pages
+   ========================================================================== */
+
+.page-hero {
+  padding-block: clamp(40px, 7vw, 72px);
+  background: var(--ink); color: var(--on-dark);
+  border-block-start: 1px solid var(--ink-3);
+}
+.page-hero h1 { max-width: 18em; margin: 0 0 12px; color: var(--white); }
+.page-hero__lead { max-width: 42em; margin: 0; font-size: 1.125rem; color: var(--muted-d); }

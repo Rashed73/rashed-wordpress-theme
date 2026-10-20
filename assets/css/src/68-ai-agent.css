@@ -1,0 +1,73 @@
+/* ==========================================================================
+   AI agent landing page: example conversation, flow diagram, outcome cards
+   (plain HTML and CSS, so the page loads no images)
+   ========================================================================== */
+
+/* Example conversation in the hero's window frame. */
+.chat { display: grid; gap: 12px; padding: 20px; }
+.chat::before { margin: -20px -20px 0; } /* the window bar of .browser spans the full width */
+.chat__label { margin: 4px 0 0; font-size: .8125rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.chat__bubble { max-width: 85%; margin: 0; padding: 12px 16px; border-radius: 16px; font-size: .9688rem; line-height: 1.6; }
+.chat__bubble--user { justify-self: end; background: var(--accent); color: var(--accent-ink); border-end-end-radius: 4px; }
+.chat__bubble--bot  { justify-self: start; background: var(--ink-3); color: var(--on-dark); border-end-start-radius: 4px; }
+.is-dark .chat__bubble--user { color: var(--accent-ink); }
+.is-dark .chat__bubble--bot { color: var(--on-dark); }
+
+/* Three outcome figures under the hero (same look as the home page numbers). */
+.stats--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* The closing line of a feature block. */
+.result { margin-block-start: 8px; font-weight: 600; color: var(--accent-strong); }
+
+/* Flow diagram: four steps in a row, joined by a line. */
+.flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 32px 0 40px; padding: 0; list-style: none; counter-reset: none; }
+.flow__step { position: relative; display: grid; gap: 6px; align-content: start; padding: 24px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+.flow__step > span:last-child { color: var(--muted); font-size: .9688rem; line-height: 1.6; }
+.flow__step strong { font-size: 1.0625rem; }
+.flow__n { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--chip-bg); color: var(--chip-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.flow__step:not(:last-child)::after {
+  content: ""; position: absolute; inset-block-start: 40px; inset-inline-end: -25px; width: 24px; height: 2px; background: var(--line-strong);
+}
+.ai__sub { margin-block: 0 16px; }
+
+/* Use cases: a large figure leads each card. */
+.card .outcome__n { margin: 0; font-size: 2.75rem; font-weight: 700; line-height: 1.05; color: var(--accent-strong); font-variant-numeric: tabular-nums; direction: ltr; width: fit-content; }
+.card .outcome__l { margin: 4px 0 20px; font-size: .9375rem; font-weight: 600; color: var(--text-soft); }
+
+@media (max-width: 1000px) {
+  .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .flow__step::after { display: none; }
+}
+@media (max-width: 600px) {
+  .flow { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .stats--3 { grid-template-columns: minmax(0, 1fr); }
+  .chat__bubble { max-width: 92%; }
+}
+
+/* ---- Channels to agent illustration (inline SVG in a dark panel) ---- */
+.hub-panel {
+  padding: clamp(12px, 3vw, 24px); background: var(--ink); border: 1px solid var(--ink-line); border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.hub { display: block; width: 100%; height: auto; }
+html[dir="rtl"] .hub { transform: scaleX(-1); } /* the flow runs from the reading side */
+.hub__node { fill: var(--ink-2); stroke: var(--ink-line); stroke-width: 1.5; }
+.hub__icon { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.hub__lines path { fill: none; stroke: var(--accent); stroke-opacity: .55; stroke-width: 2; stroke-dasharray: 6 8; animation: hub-flow 1.6s linear infinite; }
+.hub__ring { fill: none; stroke: var(--accent); stroke-opacity: .35; stroke-width: 1.5; stroke-dasharray: 3 7; transform-origin: 280px 180px; animation: hub-spin 40s linear infinite; }
+.hub__spark { fill: var(--ink); }
+@keyframes hub-flow { to { stroke-dashoffset: -28; } }
+@keyframes hub-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .hub__lines path, .hub__ring { animation: none; } }
+
+/* Flow step: number and icon on one row. */
+.flow__top { display: flex; align-items: center; justify-content: space-between; margin-block-end: 8px; }
+.flow__icon { color: var(--accent-strong); }
+.flow__icon svg { width: 28px; height: 28px; }
+.flow__step > span:last-child { color: var(--muted); }
+
+/* Four channel cards in one row on wide screens; the two store/social cards are roomier. */
+.card-grid--4 { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+.vertical { padding: 32px; }
+.vertical .ticks { margin: 0; gap: 12px; }
+.vertical h3 { margin-block-end: 20px; }

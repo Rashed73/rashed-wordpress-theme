@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Block content (`.entry-content`) and long-form text (`.prose`)
+   Pages are made of full-width block sections; plain text blocks sit in a
+   readable column. A block opts out of the column by being a Group (section),
+   or by using the Wide / Full alignment.
+   ========================================================================== */
+
+.entry-content > * { max-width: 760px; margin-inline: auto; padding-inline: var(--gutter); }
+
+.entry-content > .alignwide,
+.entry-content > .alignfull,
+.entry-content > .section,
+.entry-content > .wp-block-group { max-width: none; padding-inline: 0; }
+
+/* Breathing room before the first and after the last plain block. */
+.entry-content > p:first-child,
+.entry-content > h2:first-child { margin-block-start: var(--section-y); }
+.entry-content > :last-child { margin-block-end: var(--section-y); }
+
+/* ---- Long-form text ---- */
+.prose { font-size: 1.0625rem; color: var(--text-soft); }
+.prose h2, .prose h3 { margin-block-start: 1.6em; color: var(--text); }
+.prose a:not(.btn):not(.wp-block-button__link) { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 3px; }
+.prose img { border-radius: var(--radius-sm); }
+
+/* Inside a project page the content fills its own column. */
+.case__main .entry-content > * { max-width: none; margin-inline: 0; padding-inline: 0; }
+.case__main .entry-content > :first-child { margin-block-start: 0; }
+.case__main .entry-content > :last-child { margin-block-end: 0; }
+/* Lists keep their indent, so the bullets stay inside the column. */
+.case__main .entry-content > :is(ul, ol) { padding-inline-start: 1.25em; }
+
+/* ---- Images inserted with the Image block ---- */
+.wp-block-image { margin-block: 1.5em; }
+.wp-block-image img { border: 1px solid var(--line); border-radius: var(--radius-sm); }
+
+/* A full-width section that closes the page needs no extra space below it. */
+.entry-content > .wp-block-group:last-child { margin-block-end: 0; }

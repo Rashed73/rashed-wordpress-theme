@@ -1,0 +1,12 @@
+/* Block editor: match the front end's typography. */
+body.editor-styles-wrapper {
+  font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #0F1A2E;
+}
+.editor-styles-wrapper h1, .editor-styles-wrapper h2, .editor-styles-wrapper h3 { font-weight: 700; letter-spacing: -0.015em; }
+.editor-styles-wrapper a { color: #0B63C5; }
+
+/* Page sections (Group blocks) span the full width of the editor, as they do on the site. */
+.editor-styles-wrapper .is-root-container > .wp-block-group { max-width: none; margin-inline: 0; }

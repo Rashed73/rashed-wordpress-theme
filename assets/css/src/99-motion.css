@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Motion preferences — keep this file last so it overrides every transition.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rashid/featured-projects",
+  "title": "Featured projects",
+  "category": "widgets",
+  "icon": "portfolio",
+  "description": "Shows the projects marked \"Show on the home page\", in their numbered order, newest first among equal numbers.",
+  "keywords": ["projects", "portfolio", "home"],
+  "textdomain": "rashid",
+  "attributes": {
+    "count": { "type": "number", "default": 6 },
+    "category": { "type": "string", "default": "" },
+    "onlyHome": { "type": "boolean", "default": true }
+  },
+  "supports": { "html": false, "align": ["wide", "full"] },
+  "editorScript": "file:./editor.js",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,17 @@
+/*
+Theme Name: Rashed
+Theme URI: https://rashed2dev.com/
+Author: Mohamed Rashed
+Author URI: https://rashed2dev.com/
+Description: A bilingual (English / Arabic RTL) portfolio and services theme. Block-editor friendly, no page builder, no jQuery.
+Version: 0.1.0
+Tags: portfolio, business, rtl-language-support, translation-ready, custom-logo, featured-images, block-styles, full-width-template
+Requires at least: 6.4
+Requires PHP: 8.1
+Text Domain: rashid
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+All styles are compiled into assets/css/main.css from assets/css/src/.
+This file only carries the theme header. See docs/ARCHITECTURE.md.
+*/

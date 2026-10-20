@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Galleries (core Gallery block)
+   Project screenshots are tall full-page captures. Showing each at full width
+   would make a page thousands of pixels long, so a gallery shows a uniform grid
+   of thumbnails cropped from the top; a click opens the full image.
+   ========================================================================== */
+
+.entry-content .wp-block-gallery.has-nested-images {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px; margin-block: 1.5em;
+}
+
+/* WordPress sizes each gallery image as a third of its row with a selector that
+   includes an ID (":not(#individual-image)"). The grid above already sizes the
+   cells, so the same selector is repeated here to win on specificity. */
+.entry-content .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) { width: auto; margin: 0; }
+
+.entry-content .wp-block-gallery .wp-block-image a { display: block; }
+
+.entry-content .wp-block-gallery .wp-block-image img {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top center;
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.entry-content .wp-block-gallery .wp-block-image a:hover img { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+/* A gallery set to 2 columns (large, readable screenshots) keeps 2 until the screen is narrow. */
+.entry-content .wp-block-gallery.has-nested-images.columns-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 600px) {
+  .entry-content .wp-block-gallery.has-nested-images.columns-2 { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* A gallery set to 3 columns (six screens in two even rows) keeps 3 until the tablet width. */
+.entry-content .wp-block-gallery.has-nested-images.columns-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 900px) {
+  .entry-content .wp-block-gallery.has-nested-images.columns-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .entry-content .wp-block-gallery.has-nested-images.columns-3 { grid-template-columns: minmax(0, 1fr); }
+}

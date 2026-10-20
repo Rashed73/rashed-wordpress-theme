@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Design tokens
+   The only place raw colours, sizes and fonts are defined. Every other file
+   reads these variables, so re-skinning the theme means editing this file.
+   ========================================================================== */
+
+:root {
+  /* Surfaces */
+  --ink: #0A1020;          /* dark sections: header, hero, footer */
+  --ink-2: #111B2E;        /* raised dark surfaces */
+  --ink-3: #1A2740;
+  --ink-line: #22304A;     /* borders on dark */
+  --paper: #F5F7FB;        /* page background */
+  --white: #FFFFFF;        /* cards */
+  --line: #DCE3EE;         /* borders on light */
+
+  /* Text */
+  --text: #0F1A2E;
+  --text-soft: #3B4A63;
+  --muted: #5A6A82;        /* secondary text on light (AA on --paper) */
+  --muted-d: #9FB0C8;      /* secondary text on dark */
+
+  /* Accent */
+  --accent: #3AA8FF;       /* buttons and highlights on dark */
+  --accent-hover: #6CBFFF;
+  --accent-ink: #04111F;   /* text on the accent colour (AA) */
+  --accent-strong: #0B63C5;/* accent used as text on light (AA) */
+  --chip-bg: #E3F0FF;
+  --chip-ink: #0B4F9E;
+
+  --ink-deep: #070B16;     /* footer */
+  --ink-dot: #33425F;      /* the three dots of a browser frame */
+  --on-dark: #E8EEF8;      /* body text on dark */
+  --surface-2: #E6ECF5;    /* placeholder surfaces on light */
+  --line-2: #D3DCEA;
+  --line-strong: #C5D0E0;  /* outline buttons on light */
+  --line-field: #B9C5D8;   /* form field borders */
+  --badge-bg: #12304F;     /* small badge on dark */
+  --badge-ink: #7CC3FF;
+
+  /* Status (form messages) */
+  --danger: #B3261E;
+  --danger-ink: #8C1D18;
+  --danger-bg: #FBE9E7;
+  --success-ink: #0B5A2B;
+  --success-bg: #E4F6EA;
+
+  /* Shape and layout */
+  --radius: 16px;
+  --radius-sm: 10px;
+  --container: 1200px;
+  --gutter: clamp(16px, 4vw, 24px);
+  --section-y: clamp(56px, 9vw, 96px);
+  --shadow: 0 12px 28px rgba(10, 16, 32, .10);
+
+  /* Type */
+  --font: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}

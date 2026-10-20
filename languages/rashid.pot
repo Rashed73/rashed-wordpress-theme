@@ -1,0 +1,548 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rashid theme\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: rashid\n"
+
+#: 404.php:18
+msgid "This page does not exist"
+msgstr ""
+
+#: 404.php:19
+msgid "The link may be old or mistyped."
+msgstr ""
+
+#: 404.php:22
+msgid "Back to the home page"
+msgstr ""
+
+#: footer.php:16
+msgid "Footer"
+msgstr ""
+
+#: footer.php:30
+msgid "Profiles"
+msgstr ""
+
+#: footer.php:32
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: header.php:20
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:28
+msgid "Menu"
+msgstr ""
+
+#: index.php:28
+msgid "Nothing found."
+msgstr ""
+
+#: single.php:26 src/View/FallbackMenu.php:36 src/Setup/MetaTags.php:91
+msgid "Home"
+msgstr ""
+
+#: src/Admin/ProjectColumns.php:47
+msgid "Screenshot"
+msgstr ""
+
+#: src/Admin/ProjectColumns.php:51 src/Admin/ProjectPanel.php:78
+msgid "Order"
+msgstr ""
+
+#: src/Admin/ProjectColumns.php:52
+msgid "On home"
+msgstr ""
+
+#: src/Admin/ProjectPanel.php:76
+msgid "Display on the site"
+msgstr ""
+
+#: src/Admin/ProjectPanel.php:77
+msgid "Show on the home page"
+msgstr ""
+
+#: src/Admin/ProjectPanel.php:79
+msgid ""
+"Lower numbers come first: 1 is the first project. Projects with the same "
+"number show newest first."
+msgstr ""
+
+#: src/Admin/ProjectPanel.php:80
+msgid "Project details"
+msgstr ""
+
+#: src/Admin/SeoPanel.php:60
+msgid "Search appearance"
+msgstr ""
+
+#: src/Admin/SeoPanel.php:61
+msgid "Title for search engines"
+msgstr ""
+
+#: src/Admin/SeoPanel.php:62
+msgid ""
+"Aim for 50 to 60 characters. Leave empty to use the page name and your name."
+msgstr ""
+
+#: src/Admin/SeoPanel.php:63
+msgid "Description for search engines"
+msgstr ""
+
+#: src/Admin/SeoPanel.php:64
+msgid ""
+"Aim for 120 to 160 characters. Leave empty to use the page summary "
+"(excerpt)."
+msgstr ""
+
+#: src/Admin/SeoPanel.php:65
+msgid "characters"
+msgstr ""
+
+#: src/Content/Article.php:43
+msgid "%d min read"
+msgstr ""
+
+#: src/Content/ArticleToc.php:67 src/Content/ArticleToc.php:68
+msgid "On this page"
+msgstr ""
+
+#: src/Content/Project.php:153 src/Content/ProjectFields.php:36
+msgid "Client"
+msgstr ""
+
+#: src/Content/Project.php:154
+msgid "Industry"
+msgstr ""
+
+#: src/Content/Project.php:155
+msgid "Role"
+msgstr ""
+
+#: src/Content/Project.php:156 src/Content/ProjectFields.php:40
+msgid "Developer"
+msgstr ""
+
+#: src/Content/Project.php:157 src/Content/ProjectFields.php:41
+msgid "Designer"
+msgstr ""
+
+#: src/Content/ProjectFields.php:37
+msgid "Industry / country"
+msgstr ""
+
+#: src/Content/ProjectFields.php:38
+msgid "My role"
+msgstr ""
+
+#: src/Content/ProjectFields.php:39
+msgid "Technologies (comma separated)"
+msgstr ""
+
+#: src/Content/ProjectFields.php:42
+msgid "Website address"
+msgstr ""
+
+#: src/Content/ProjectPostType.php:55
+msgid "Describe the project: the problem, the approach and the result."
+msgstr ""
+
+#: src/Content/ProjectPostType.php:56
+msgid "What was delivered (one item per line)"
+msgstr ""
+
+#: src/Content/ProjectPostType.php:65 template-parts/project/filters.php:25
+msgid "Project categories"
+msgstr ""
+
+#: src/Content/ProjectPostType.php:66
+msgid "Project category"
+msgstr ""
+
+#: src/Content/ProjectPostType.php:82 src/Content/ProjectPostType.php:87
+#: src/View/FallbackMenu.php:37 template-parts/project/pager.php:18
+#: blocks/featured-projects/editor.js:35
+msgid "Projects"
+msgstr ""
+
+#: src/Content/ProjectPostType.php:83
+msgid "Project"
+msgstr ""
+
+#: src/Content/ProjectPostType.php:84
+msgid "Add new project"
+msgstr ""
+
+#: src/Content/ProjectPostType.php:85
+msgid "Edit project"
+msgstr ""
+
+#: src/Content/ProjectPostType.php:86 template-parts/project/filters.php:29
+#: template-parts/project/pager.php:28
+msgid "All projects"
+msgstr ""
+
+#: src/Settings/Customizer.php:27
+msgid "Brand and call to action"
+msgstr ""
+
+#: src/Settings/Options.php:32
+msgid "Brand name"
+msgstr ""
+
+#: src/Settings/Options.php:33
+msgid "Brand mark (1-3 characters)"
+msgstr ""
+
+#: src/Settings/Options.php:34
+msgid "Your name (used in page titles and search results)"
+msgstr ""
+
+#: src/Settings/Options.php:35
+msgid "Your role, e.g. Web developer"
+msgstr ""
+
+#: src/Settings/Options.php:36
+msgid "Profile links (LinkedIn, GitHub …), separated by spaces"
+msgstr ""
+
+#: src/Settings/Options.php:37
+msgid "Footer text ({brand} = brand name, {year} = current year)"
+msgstr ""
+
+#: src/Settings/Options.php:38
+msgid "Header button text"
+msgstr ""
+
+#: src/Settings/Options.php:38
+msgid "Get in touch"
+msgstr ""
+
+#: src/Settings/Options.php:39
+msgid "Closing section: title"
+msgstr ""
+
+#: src/Settings/Options.php:39
+msgid "Let's talk"
+msgstr ""
+
+#: src/Settings/Options.php:40
+msgid "Closing section: text"
+msgstr ""
+
+#: src/Settings/Options.php:40
+msgid ""
+"Have a question or a request? Send a message and you will get a reply as "
+"soon as possible."
+msgstr ""
+
+#: src/Settings/Options.php:41
+msgid "Closing section: button text"
+msgstr ""
+
+#: src/Settings/Options.php:41
+msgid "Contact me"
+msgstr ""
+
+#: src/Leads/FormShortcode.php:43
+msgid "Send message"
+msgstr ""
+
+#: src/Leads/LeadFields.php:38
+msgid "New"
+msgstr ""
+
+#: src/Leads/LeadFields.php:39
+msgid "Contacted"
+msgstr ""
+
+#: src/Leads/LeadFields.php:40
+msgid "Closed"
+msgstr ""
+
+#: src/Leads/LeadForm.php:23 src/Leads/Notifier.php:32
+#: src/Leads/Admin/LeadColumns.php:41 src/Leads/Admin/LeadDetailsBox.php:43
+#: src/Leads/Admin/LeadExport.php:51
+msgid "Name"
+msgstr ""
+
+#: src/Leads/LeadForm.php:24 src/Leads/Notifier.php:33
+#: src/Leads/Admin/LeadDetailsBox.php:44 src/Leads/Admin/LeadExport.php:51
+msgid "Email"
+msgstr ""
+
+#: src/Leads/LeadForm.php:25
+msgid "Phone or WhatsApp (optional)"
+msgstr ""
+
+#: src/Leads/LeadForm.php:26
+msgid "How can I help?"
+msgstr ""
+
+#: src/Leads/LeadForm.php:66
+msgid "Please fill in this field."
+msgstr ""
+
+#: src/Leads/LeadForm.php:70
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: src/Leads/LeadForm.php:74
+msgid "Please enter a valid phone number."
+msgstr ""
+
+#: src/Leads/LeadPostType.php:71 src/Leads/LeadPostType.php:73
+msgid "Leads"
+msgstr ""
+
+#: src/Leads/LeadPostType.php:72 src/Leads/LeadPostType.php:75
+msgid "Lead"
+msgstr ""
+
+#: src/Leads/LeadPostType.php:74
+msgid "All leads"
+msgstr ""
+
+#: src/Leads/LeadPostType.php:76
+msgid "Search leads"
+msgstr ""
+
+#: src/Leads/LeadPostType.php:77
+msgid "No leads yet."
+msgstr ""
+
+#: src/Leads/LeadPostType.php:78
+msgid "No leads in the trash."
+msgstr ""
+
+#. 1: site name, 2: visitor name.
+#: src/Leads/Notifier.php:17
+msgid "[%1$s] New request from %2$s"
+msgstr ""
+
+#: src/Leads/Notifier.php:34 src/Leads/Admin/LeadDetailsBox.php:45
+#: src/Leads/Admin/LeadExport.php:51
+msgid "Phone"
+msgstr ""
+
+#: src/Leads/Notifier.php:35 src/Leads/Admin/LeadColumns.php:43
+#: src/Leads/Admin/LeadDetailsBox.php:47 src/Leads/Admin/LeadExport.php:51
+msgid "Form"
+msgstr ""
+
+#: src/Leads/Notifier.php:36 src/Leads/Admin/LeadDetailsBox.php:48
+msgid "Page"
+msgstr ""
+
+#: src/Leads/Notifier.php:40
+msgid "Open in the dashboard"
+msgstr ""
+
+#: src/Leads/Recipient.php:38
+msgid "Contact form"
+msgstr ""
+
+#: src/Leads/Recipient.php:45
+msgid "Send new requests to this email"
+msgstr ""
+
+#: src/Leads/Recipient.php:46
+msgid "Leave empty to use the site administrator email."
+msgstr ""
+
+#: src/Leads/SubmissionHandler.php:53
+msgid "Too many requests in a short time. Please try again later."
+msgstr ""
+
+#: src/Leads/SubmissionHandler.php:59
+msgid "Sorry, your message could not be saved. Please try again."
+msgstr ""
+
+#: src/Leads/Admin/LeadColumns.php:42 src/View/FallbackMenu.php:39
+msgid "Contact"
+msgstr ""
+
+#: src/Leads/Admin/LeadColumns.php:44 src/Leads/Admin/LeadDetailsBox.php:62
+#: src/Leads/Admin/LeadExport.php:51
+msgid "Status"
+msgstr ""
+
+#: src/Leads/Admin/LeadColumns.php:45 src/Leads/Admin/LeadDetailsBox.php:50
+#: src/Leads/Admin/LeadExport.php:51
+msgid "Received"
+msgstr ""
+
+#: src/Leads/Admin/LeadColumns.php:77
+msgid "All statuses"
+msgstr ""
+
+#: src/Leads/Admin/LeadDetailsBox.php:33
+msgid "Request"
+msgstr ""
+
+#: src/Leads/Admin/LeadDetailsBox.php:34
+msgid "Follow-up"
+msgstr ""
+
+#: src/Leads/Admin/LeadDetailsBox.php:49 src/Leads/Admin/LeadExport.php:51
+#: template-parts/header/language-switcher.php:17
+msgid "Language"
+msgstr ""
+
+#: src/Leads/Admin/LeadDetailsBox.php:51 src/Leads/Admin/LeadExport.php:51
+msgid "Message"
+msgstr ""
+
+#: src/Leads/Admin/LeadDetailsBox.php:70
+msgid "Private notes"
+msgstr ""
+
+#: src/Leads/Admin/LeadExport.php:36
+msgid "Export CSV"
+msgstr ""
+
+#: src/Leads/Admin/LeadExport.php:42
+msgid "You are not allowed to export leads."
+msgstr ""
+
+#: src/Leads/Admin/LeadExport.php:51
+msgid "Notes"
+msgstr ""
+
+#: src/View/Blog.php:41
+msgid "Blog"
+msgstr ""
+
+#: src/View/FallbackMenu.php:38
+msgid "About"
+msgstr ""
+
+#: src/Setup/SeoTitles.php:65
+msgid "Page not found"
+msgstr ""
+
+#: src/Setup/ThemeSupport.php:53
+msgid "Primary menu"
+msgstr ""
+
+#: src/Setup/ThemeSupport.php:54
+msgid "Footer menu"
+msgstr ""
+
+#: template-parts/blog/author.php:21
+msgid "About the author"
+msgstr ""
+
+#: template-parts/blog/author.php:22
+msgid "Written by"
+msgstr ""
+
+#: template-parts/blog/author.php:27
+msgid "About me"
+msgstr ""
+
+#: template-parts/blog/listing.php:18
+msgid "Article categories"
+msgstr ""
+
+#: template-parts/blog/listing.php:22
+msgid "All articles"
+msgstr ""
+
+#: template-parts/blog/listing.php:46
+msgid "Newer articles"
+msgstr ""
+
+#: template-parts/blog/listing.php:47
+msgid "Older articles"
+msgstr ""
+
+#: template-parts/blog/listing.php:51
+msgid "Articles are on the way."
+msgstr ""
+
+#: template-parts/blog/related.php:31
+msgid "Keep reading"
+msgstr ""
+
+#: template-parts/form/lead-form.php:27
+msgid "Thank you! Your message was sent and you will get a reply soon."
+msgstr ""
+
+#: template-parts/form/lead-form.php:68
+msgid "Your details are used only to reply to your request."
+msgstr ""
+
+#: template-parts/header/primary-nav.php:12
+msgid "Main"
+msgstr ""
+
+#: template-parts/common/breadcrumbs.php:17
+msgid "Breadcrumb"
+msgstr ""
+
+#: template-parts/project/card.php:40
+msgid "View project"
+msgstr ""
+
+#: template-parts/project/facts.php:17 template-parts/project/facts.php:18
+msgid "Project at a glance"
+msgstr ""
+
+#: template-parts/project/facts.php:30
+msgid "Technologies"
+msgstr ""
+
+#: template-parts/project/facts.php:44
+msgid "Visit website"
+msgstr ""
+
+#: template-parts/project/grid.php:18
+msgid "No projects yet."
+msgstr ""
+
+#: template-parts/project/pager.php:22
+msgid "Previous project"
+msgstr ""
+
+#: template-parts/project/pager.php:33
+msgid "Next project"
+msgstr ""
+
+#: template-parts/project/showcase.php:16
+msgid "Selected work"
+msgstr ""
+
+#: template-parts/project/showcase.php:17
+msgid "Websites, e-commerce platforms and business systems built for clients."
+msgstr ""
+
+#: template-parts/project/showcase.php:18
+msgid "Portfolio"
+msgstr ""
+
+#: blocks/featured-projects/editor.js:25
+msgid "All categories"
+msgstr ""
+
+#: blocks/featured-projects/editor.js:37
+msgid "How many projects"
+msgstr ""
+
+#: blocks/featured-projects/editor.js:46
+msgid "Category"
+msgstr ""
+
+#: blocks/featured-projects/editor.js:54
+msgid "Only projects marked \"Show on the home page\""
+msgstr ""
+
+#: blocks/featured-projects/editor.js:55
+msgid "When none are marked, the newest projects are shown."
+msgstr ""
